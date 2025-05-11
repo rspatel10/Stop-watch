@@ -1,14 +1,14 @@
-# Kiton's Stop Watch ⏱️
+# Rudra Stop Watch ⏱️
 
 A stylish, fully functional stopwatch web application that allows users to start, pause, reset the timer, and capture timestamps. The stopwatch also includes a light and dark theme toggle for a customizable experience.
 
 ## 🚀 Live Demo
 
-Check out the live version of the stopwatch [here](https://kirtanpatel01.github.io/ARKA_WD_2/).
+Check out the live version of the stopwatch [here](https://github.com/rspatel10/Stop-watch.git).
 
 ## 📂 Project Overview
 
-**Kiton's Stop Watch** is a simple yet elegant stopwatch built using modern web technologies. It is designed to be user-friendly with basic stopwatch functionalities like start, stop, reset, and timestamp recording. It also includes a light/dark mode theme switcher for better visual customization.
+**Rudra Stop Watch** is a simple yet elegant stopwatch built using modern web technologies. It is designed to be user-friendly with basic stopwatch functionalities like start, stop, reset, and timestamp recording. It also includes a light/dark mode theme switcher for better visual customization.
 
 ### Features
 
@@ -32,7 +32,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/kirtanpatel01/ARKA_WD_2.git
+    git clone https://github.com/rspatel10/Stop-watch.git
     ```
 
 2. Navigate to the project folder:
