@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiton's Digital Watch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Styling from your layout */
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #0f1924;
+        font-family: 'Lexend', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        width: 90rem;
+        height: 37.5rem;
+        color: #daedff;
+        border: solid 1.5px #00ffff71;
+        border-radius: .5rem;
+        padding: 2rem;
+      }
+
+      .left {
+        display: grid;
+        gap: 2rem;
+        height: 100%;
+        grid-template-rows: 1fr .35fr;
+  *-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .controls {
+        background-color: #e8f5ff0f;
+        border-radius: .875rem;
+      }
+
+      .v_line {
+        width: 1px;
+        height: 100%;
+        background-color: #00ffff71;
+        margin: 0 2rem;
+      }
+
+      /* Clock container styling */
+      .clock {
+        display: flex;
+        gap: 0.5rem;
+        color: #00ffff;
+        font-family: 'DM Sans', sans-serif;
+      }
+
+      /* Styling each unit box */
+      .time-unit {
+        background-color: #00ffff13;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      #hours {
+        width: 2rem;
+      }
+      #minutes {
+        width: 2rem;
+      }
+      #seconds {
+        width: 2rem;
+      }
+      #milliseconds {
+        width: 2rem;
+      }
+
+      .separator {
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        padding: 0 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <div class="watch">
+          <div class="clock">
+            <div class="time-unit" id="hours">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="seconds">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="milliseconds">000</div>
+          </div>
+        </div>
+        <div class="controls">Controls</div>
+      </div>
+
+      <div class="v_line"></div>
+
+      <div class="right">
+        <!-- You can add content here -->
+      </div>
+    </main>
+
+    <script>
+      // JavaScript for digital clock functionality
+      const hoursElement = document.getElementById('hours');
+      const minutesElement = document.getElementById('minutes');
+      const secondsElement = document.getElementById('seconds');
+      const millisecondsElement = document.getElementById('milliseconds');
+
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const milliseconds = now.getMilliseconds() % 100;
+
+        hoursElement.textContent = hours;
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
+        millisecondsElement.textContent = milliseconds;
+      }
+
+      // Update the clock every 1 millisecond
+      setInterval(updateClock, 1);
+    </script>
+  </body>
+</html>

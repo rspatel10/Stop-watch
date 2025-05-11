@@ -1,0 +1,284 @@
+/* General body settings */
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0f1924; /* Dark background */
+  font-family: "Lexend", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 1rem 5.5rem;
+  color: #fff;
+}
+
+main {
+  display: grid;
+  margin-bottom: 1.75rem;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 90%;
+  height: 37.5rem;
+  color: #daedff; /* Default text color */
+  border: solid 1.5px #00ffff71;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+#theme-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #daedff; /* Default button color in dark theme */
+}
+
+#theme-btn:hover {
+  color: #00a2a2; /* Hover color in dark theme */
+}
+
+/* Left section */
+.left {
+  display: grid;
+  gap: 2rem;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.35fr;
+  justify-content: center;
+}
+
+.watch {
+  /* width: 100%; */
+  background-color: #ffffff13; /* Transparent white for dark theme */
+  border-radius: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.v_line {
+  width: 1px;
+  height: 100%;
+  background-color: #00ffff71; /* Cyan border */
+  margin: 0 2rem;
+}
+
+/* Clock display */
+.clock {
+  display: flex;
+  gap: 0.5rem;
+  color: #00ffff; /* Cyan text in dark theme */
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Styling each unit box */
+.time-unit {
+  background-color: #00ffff13;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hours, #minutes, #seconds, #milliseconds {
+  width: 2rem;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  padding: 0 0.25rem;
+}
+
+/* Control buttons */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-content: center;
+  background-color: #e8f5ff0f;
+  border-radius: 0.875rem;
+  padding: 1rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 1.5rem;
+  padding: 1.25rem;
+  background-color: slategray;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img:hover {
+  background-color: #00a2a2;
+}
+
+/* Right section */
+.right {
+  height: 100%; 
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.time-stamp-list {
+  height: 34rem;
+  margin-top: 1rem;
+  overflow: auto;
+  border-radius: 1rem;
+}
+
+/* Light Theme Styles */
+.light-mode {
+  background-color: #f4f4f4;
+  color: #000000; /* Dark text for light theme */
+}
+
+.light-mode h1 {
+  color: #000;
+}
+
+.light-mode main {
+  color: #000;
+  border: solid 1.5px #00acc1;
+}
+
+.light-mode .watch {
+  background-color: #e0f7fa;
+}
+
+.light-mode .clock {
+  color: #000;
+}
+
+.light-mode .time-unit {
+  background-color: #80deea;
+  color: #000;
+}
+
+.light-mode .separator {
+  color: #000;
+}
+
+.light-mode .v_line {
+  background-color: #80deea;
+}
+
+.light-mode .controls {
+  background-color: #e0f7fa;
+}
+
+.light-mode .btn img {
+  background-color: #80deea;
+}
+
+.light-mode .btn img:hover {
+  background-color: #00acc1;
+}
+
+.light-mode .time-stamp-list {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.light-mode #theme-btn {
+  color: #000;
+}
+
+.light-mode #theme-btn:hover {
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: 70%;
+    min-height: 100vh;
+    /* margin: 5rem 0; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 1rem;
+  }
+
+  .v_line {
+    width: 100%;
+    height: 1px;
+    background-color: #00ffff71;
+    margin: 2rem 0;
+  }
+
+  .time-stamp-list {
+    height: 28rem;
+  }
+
+  img {
+    height: 1.875rem;
+    padding: 0.875rem;
+    border-radius: 1.2rem;
+  }
+
+  .right > span {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media (max-width: 568px) {
+
+  main {
+    padding: 1rem;
+  }
+  .clock {
+    justify-content: center;
+    gap: 1.5%;
+  }
+
+  #hours, #minutes, #seconds, #milliseconds {
+    width: 5vw;
+  }
+
+  .time-unit {
+    font-size: 8vw;
+    padding: 2.5vw 4.5vw;
+  }
+
+  .controls {
+    padding: 1rem;
+  }
+
+  img {
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

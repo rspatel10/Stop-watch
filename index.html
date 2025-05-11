@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rudra Watch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1>Hey, this is Kiton's Stop Watch!</h1>
+
+    <div class="theme-toggle">
+      <button id="theme-btn">🌙</button>
+    </div>
+
+    <main>
+      <div class="left">
+        <div class="watch">
+          <div class="clock">
+            <div class="time-unit" id="hours">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="seconds">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="milliseconds">00</div>
+          </div>
+        </div>
+        <div class="controls">
+            <div class="btn reset-container">
+                <img src="./images/reset.svg" alt="reset" >Reset
+            </div>
+            <div class="btn start-container">
+              <img src="./images/start.svg" alt="reset" >
+              <span class="btn-text">Start</span>
+            </div>
+            <div class="btn time-stamp-container">
+              <img src="./images/time.svg" alt="reset" >Flag
+            </div>
+        </div>
+      </div>
+
+      <div class="v_line"></div>
+
+      <div class="right">
+        <span>Time Stamps</span>
+        <div class="time-stamp-list">
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
